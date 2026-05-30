@@ -271,6 +271,7 @@ silver_path = "/Volumes/distributed_data_processing/distributed_project/retail_v
     .format("delta")
     .partitionBy("order_date")
     .mode("overwrite")
+    .option("overwriteSchema", "true")
     .save(silver_path)
 )
 ```
